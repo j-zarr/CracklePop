@@ -1,19 +1,19 @@
 function printResults(n) {
 
-    let results = [];
-
+    let results = '';
     if (n < 1) return;
+    
     if (n % 3 == 0 && n % 5 == 0) {
-        results.push("CracklePop");
+        results = "CracklePop";
     }
     else if (n % 3 == 0) {
-        results.push("Crackle");
+        results = "Crackle";
     }
     else if (n % 5 == 0) {
-        results.push("Pop");
+        results = "Pop";
     }
     else {
-        results.push(n);
+        results = n;
     }
 
     printResults(n - 1);
