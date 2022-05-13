@@ -24,11 +24,11 @@ const printResults = (n) => {
    printResults(n - 1);
    
    storedArr.push(results.pop());
+   console.log(storedArr); 
    return storedArr;
    
 }
 
-
-console.log(printResults(100));
+printResults(100);
 
 module.exports = printResults; 
