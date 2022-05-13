@@ -1,19 +1,23 @@
-function printResults(){
-    for(let i = 1; i <= 100; i++){
+const printResults = (n) => {
+    let results = [];
+    
+    for(let i = 1; i <= n; i++){
         if( i % 3 == 0 && i % 5 == 0){
-            console.log("CracklePop")
+            results.push("CracklePop");
         }
         else if( i % 3 == 0){
-            console.log("Crackle")
+            results.push("Crackle");
         }
         else if( i % 5 == 0){
-            console.log("Pop")
+            results.push("Pop");
         }
         else{
-            console.log(i);
+           results.push(i); 
         }        
-    }
+    } return results;
 
 }
 
-printResults(); 
+console.log(printResults(100));
+
+module.exports = printResults;

@@ -1,0 +1,23 @@
+{
+  "name": "cracklepop",
+  "version": "1.0.0",
+  "description": "There are two files that each provide a solution, one using a loop and the other using recursion.",
+  "main": "loop.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-zarr/CracklePop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/j-zarr/CracklePop/issues"
+  },
+  "homepage": "https://github.com/j-zarr/CracklePop#readme",
+  "devDependencies": {
+    "jest": "^28.1.0"
+  }
+}

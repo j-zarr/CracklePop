@@ -1,24 +1,34 @@
-function printResults(n) {
 
-    let results = '';
+let storedArr = [];
+
+const printResults = (n) => {
+
+    let results = [];
+
+
     if (n < 1) return;
     
     if (n % 3 == 0 && n % 5 == 0) {
-        results = "CracklePop";
+        results.push("CracklePop");
     }
     else if (n % 3 == 0) {
-        results = "Crackle";
+        results.push("Crackle");
     }
     else if (n % 5 == 0) {
-        results = "Pop";
+        results.push("Pop");
     }
     else {
-        results = n;
+        results.push(n);
     }
-
-    printResults(n - 1);
-    console.log(results);
+ 
+   printResults(n - 1);
+   
+   storedArr.push(results.pop());
+   return storedArr;
+   
 }
 
 
-printResults(100); 
+console.log(printResults(100));
+
+module.exports = printResults; 
