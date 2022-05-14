@@ -3,11 +3,10 @@ let storedArr = [];
 
 const printResults = (n) => {
 
-    let results = [];
+    let results = []; 
 
+    if (n < 1) return results;
 
-    if (n < 1) return;
-    
     if (n % 3 == 0 && n % 5 == 0) {
         results.push("CracklePop");
     }
@@ -20,15 +19,20 @@ const printResults = (n) => {
     else {
         results.push(n);
     }
- 
-   printResults(n - 1);
    
-   storedArr.push(results.pop());
-   console.log(storedArr); 
-   return storedArr;
-   
+//** was trying to avoid using a global array but cannot remove the fist instance of the empty array from the results **
+//** leaving this line of code to revisit** 
+//return [`${printResults(n - 1)}`, ...results];
+
+ printResults(n-1);
+ storedArr = [...storedArr, ...results];
+  
+return storedArr;
+
 }
 
-printResults(100);
+console.log(printResults(100));
+
+
 
 module.exports = printResults; 
